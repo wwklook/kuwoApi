@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello World!</title>
+    <link type="favicon" rel="shortcut icon" href="/static/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="/static/music.css">
+    <script type="text/javascript" src="/static/music.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="opac">
+            <div class="box1">
+                <button id="back" title="后退"><img src="/static/back.png" /></button>
+                <input type="text" name="search" class="search" placeholder="搜索音乐/MV/歌手" />
+            </div>
+
+            <div class="box2">
+                <div class="meau">
+                    <div></div>
+                    <div>
+                        <ul>
+                            <p>发现音乐</p>
+                            <li id="singer_top">歌手</li>
+                            <li id="mv">&thinsp;M V</li>
+                            <li id="rcm">歌单</li>
+                            <p>排行榜Top100</p>
+                            <li class="rank">飙升榜</li>
+                            <li class="rank">热歌榜</li>
+                            <li class="rank">电音榜</li>
+                            <li class="rank">Vlog音乐榜</li>
+                            <li class="rank">华语榜</li>
+                            <li class="rank">日语榜</li>
+                            <li class="rank">公信榜</li>
+                            <li class="rank">轻音乐榜</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="song_info">
+                    <div class="header">
+                        <ul>
+                            <li class="num">序号</li>
+                            <li class="name">歌曲</li>
+                            <li class="songer">歌手</li>
+                            <li class="album">专辑</li>
+                            <li class="time">时间</li>
+                        </ul>
+                    </div>
+                    <div class="search_list"></div>
+                </div>
+                <div class="singer_rank"></div>
+                <div id="singer_info">
+                    <div id="artist_info">
+                        <img class="singer_img" />
+                        <div class="singer_name">
+                            <p class="singer_pname"></p>
+                            <p class="singer_pinfo">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="singer_head">
+                        <ul>
+                            <li class="current"><span>单曲</span></li>
+                            <li><span>专辑</span></li>
+                            <li><span>MV</span></li>
+                            <li><span>简介</span></li>
+                        </ul>
+                    </div>
+                    <div class="header">
+                        <ul>
+                            <li class="num">序号</li>
+                            <li class="name">歌曲</li>
+                            <li class="songer">歌手</li>
+                            <li class="album">专辑</li>
+                            <li class="time">时间</li>
+                        </ul>
+                    </div>
+                    <div class="singer_list">
+                    </div>
+                </div>
+                <div class="mvs"></div>
+                <div class="rcms"></div>
+                <div class="rcm_page">
+                    <img class="rp_img">
+                    <div class="rp">
+                        <p class="rp_name"></p>
+                        <p class="rp_uname"><img><span></span></p>
+                        <p class="rp_intro"></p>
+                        <p class="rp_info"></p>
+                    </div>
+                    <div class="header">
+                        <ul>
+                            <li class="num">序号</li>
+                            <li class="name">歌曲</li>
+                            <li class="songer">歌手</li>
+                            <li class="album">专辑</li>
+                            <li class="time">时间</li>
+                        </ul>
+                    </div>
+                    <div class="singer_list"></div>
+                </div>
+                <div class="album_page">
+                    <img class="album_img">
+                    <div class="album_info">
+                        <p class="album_name"></p>
+                        <p><span class="album_artist"></span></p>
+                        <p>
+                            语种 : <span class="lang"></span> 发行时间 : <span class="album_time"></span>
+                        </p>
+                        <p class="album_i">专辑简介
+                            <span class="spread">展开</span>
+                        </p>
+                        <p class="album_intro"></p>
+                    </div>
+                    <div class="header">
+                        <ul>
+                            <li class="num">序号</li>
+                            <li class="name">歌曲</li>
+                            <li class="songer">歌手</li>
+                            <li class="album">专辑</li>
+                            <li class="time">时间</li>
+                        </ul>
+                    </div>
+                    <div class="singer_list"></div>
+                </div>
+
+                <div id="cover">
+                    <img class="cover_img" src="https://h5static.kuwo.cn/upload/image/4f768883f75b17a426c95b93692d98bec7d3ee9240f77f5ea68fc63870fdb050.png">
+                    <div class="detail">
+                        <div id="cover_song">享受好歌,默认最高音质播放！！！</div>
+                        <div>歌手 : <span id="cover_name"></span>专辑 : <span id="cover_album"></span></div>
+                        <div id="lrc"></div>
+                    </div>
+                </div>
+                <div id="context">
+                    <p>热门评论<span>暂无歌曲</span></p>
+                    <ul id="comment_list"></ul>
+                </div>
+                <div id="p_list">
+                    <ul class="p_ul"></ul>
+                </div>
+                <div class="tool">
+                    <div class="control">
+                        <img id="img" src="https://h5static.kuwo.cn/upload/image/4f768883f75b17a426c95b93692d98bec7d3ee9240f77f5ea68fc63870fdb050.png">
+                        <div class="info">
+                            <div class="song">
+                                <span id="sname" title="故事写成我们">享受好歌,默认最高音质播放！！！</span>
+                                <span id="sartist" title="林俊杰"></span>
+                                <span id="time"> 00:00/00:00</span>
+                            </div>
+                            <input type="range" id="slider" max="400" min="0" step="0.1" value="0">
+                        </div>
+                        <div class="btn1">
+                            <input id="last" title="上一首" type="image" src="/static/last.png" />
+                            <input id="play" title="播放" type="image" src="/static/play.png" />
+                            <input id="next" title="下一首" type="image" src="/static/next.png" />
+                        </div>
+                        <div class="btn2">
+                            <input id="like" title="收藏" type="image" src="/static/like.png" />
+                            <input id="load" title="下载" type="image" src="/static/load.png" />
+                            <input id="comment" title="评论" type="image" src="/static/comment.png" />
+                            <input id="loop" title="列表循环" type="image" src="/static/list_loop.png" />
+                            <input id="play_list" title="播放列表" type="image" src="/static/play_list.png" />
+                            <div class="bar">
+                                <input id="volume" title="音量" type="image" src="/static/volume.png" />
+                                <input type="range" id="vol_slider" max="1" min="0" step="0.01" value="0.8"></div>
+                        </div>
+                    </div>
+                    <audio crossorigin="anonymous" src=""></audio>
+                </div>
+            </div>
+            <canvas id="canvas" width="1100" height="350"></canvas>
+        </div>
+        <div class="mvs_page">
+            <video></video>
+            <div class="mv_ctrl">
+                <div class="left">
+                    <img id="mv_play" title="播放" src="/static/mv_pause.png">
+                    <img id="mv_next" title="下一首" src="/static/mv_next.png">
+                    <span id="mv_time"> 00:00/00:00</span>
+                </div>
+                <div class="right">
+                    <button id="speed">1X</button>
+                    <img id="mv_volume" title="音量" src="/static/mv_volume.png">
+                    <input type="range" id="mv_vol_slider" max="1" min="0" step="0.01" value="1">
+                    <img id="full_browser" title="网页全屏" src="/static/full_browser.png">
+                    <img id="full_screen" title="全屏" src="/static/full screen.png">
+                </div>
+                <input type="range" id="mv_slider" max="1000" min="0" step="1" value="0">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
